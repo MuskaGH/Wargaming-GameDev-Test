@@ -1,1 +1,16 @@
-This file contains a list of all the dependencies needed to run this program.
+## Prerequisites
+- Tested on Python 3.12.
+
+## How to Run
+- To run the script, go to the 'source' directory and use the following command in your terminal: 'python main.py'
+
+## Input Data
+- The script expects an input file with data called 'input_data.txt' located in the 'data' directory.
+
+Example of input file:
+1000 I 100 10.0
+2000 I 101 13.0
+2200 I 102 13.0
+2400 E 101
+2500 E 102
+4000 E 103
