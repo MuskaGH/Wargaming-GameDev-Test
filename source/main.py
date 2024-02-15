@@ -1,12 +1,5 @@
-from orderbook import OrderBook
+from data_processing import process_data_from_file # Imports a function that contains logic to read the data from the 'input_data.txt' file
 
-order_book = OrderBook()
-order_book.add_order(1000, 100, 10.0)
-order_book.add_order(2000, 101, 13.0)
-order_book.add_order(2200, 102, 13.0)
+data_file_path = '../data/input_data.txt' # Path to our .txt file with the input data
 
-order_book.remove_order(2400, 101)
-order_book.remove_order(2500, 102)
-order_book.remove_order(4000, 100)
-
-print(order_book.calculate_time_weighted_average_price())
+print(process_data_from_file(data_file_path)) # Function that processes the inputted data and returns time-weighted average highest price of orders
