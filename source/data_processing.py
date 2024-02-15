@@ -17,7 +17,7 @@ def process_data_from_file(filename):
                 order_book.add_order(timestamp, identifier, price) # We call the function that creates/adds a new order
             elif operation == 'E': # If the operation is 'E', then it indicates that the order should be removed/deleted
                 order_book.remove_order(timestamp, identifier) # We call the function that fires a logic to remove the order
-
-    return order_book.calculate_time_weighted_average_price() # Returns time-weighted average price of all highest orders
+                
+    return order_book.calculate_time_weighted_average_highest_price() # Returns time-weighted average price of all highest orders
     
 
