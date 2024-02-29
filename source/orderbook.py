@@ -1,5 +1,10 @@
 import heapq # Imports priority queue to efficinelty handle accessing the highest price at any time
 
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+
 class OrderBook:
     def __init__(self):
         self.active_orders = set() # Set that stores all currently active order IDs (should be more efficient than a list for our purpose)
@@ -24,6 +29,7 @@ class OrderBook:
             return None
 
     def add_order(self, timestamp, id, price):
+        # logger.debug(f'Adding order: {id} at {timestamp} with price {price}')
         current_max_price = self.get_current_max_price() # Stores the current max price into variable to prevent redundant calls to the function down below
 
         # If the current max price exists, we update the total active time for the highest orders and if the new order's price is higher than the current highest price
