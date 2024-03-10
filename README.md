@@ -1,4 +1,4 @@
-# Wargaming-GameDev-Test
+# Wargaming-OB
 This is a program designed for offline analysis of data to calculate orders' time-weighted average prices.
 
 # How to Run
